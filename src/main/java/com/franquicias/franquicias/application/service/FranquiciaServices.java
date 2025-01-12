@@ -3,6 +3,8 @@ package com.franquicias.franquicias.application.service;
 import com.franquicias.franquicias.application.repository.FranquiciaRepository;
 import com.franquicias.franquicias.domain.Franquicia;
 
+import java.util.List;
+
 public class FranquiciaServices {
     private final FranquiciaRepository franquiciaRepository;
 
@@ -20,18 +22,15 @@ public class FranquiciaServices {
         return franquiciaRepository.findByNombre(name);
     }
 
-    public Franquicia updateFranquicia(String id, Franquicia franquicia) {
+    public Franquicia updateFranquicia(Integer id, Franquicia franquicia) {
         return franquiciaRepository.updateFranquicia(id, franquicia);
     }
-
-
 
     public Franquicia findById(Integer id){
         return franquiciaRepository.findById(id);
     }
 
-
-    public Iterable<Franquicia> findAll(){
+    public List<Franquicia> findAll(){
         return franquiciaRepository.findAll();
     }
 

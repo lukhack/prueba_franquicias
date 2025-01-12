@@ -2,9 +2,9 @@ package com.franquicias.franquicias.infrastruture.configuration;
 
 import com.franquicias.franquicias.application.repository.FranquiciaRepository;
 import com.franquicias.franquicias.application.service.FranquiciaServices;
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 
 @Configuration
 public class BeanConfiguration {
@@ -13,6 +13,10 @@ public class BeanConfiguration {
         return new FranquiciaServices(franquiciaRepository);
     }
 
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
 
 
 }

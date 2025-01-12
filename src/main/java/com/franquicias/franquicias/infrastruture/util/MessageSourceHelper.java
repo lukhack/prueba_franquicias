@@ -1,4 +1,4 @@
-package com.icodeap.ecommerce.infrastructure.util;
+package com.franquicias.franquicias.infrastruture.util;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;

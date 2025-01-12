@@ -2,8 +2,6 @@ package com.franquicias.franquicias.infrastruture.rest;
 
 import com.franquicias.franquicias.application.service.FranquiciaServices;
 import com.franquicias.franquicias.domain.Franquicia;
-import com.icodeap.ecommerce.application.service.EcoBottleServices;
-import com.icodeap.ecommerce.domain.EcoBottle;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,7 +35,7 @@ public class ApiFranquiciaController {
     }
 
     @PutMapping(path = "/{id}", produces = "application/json")
-    public ResponseEntity<?> getUpdate(Franquicia franquicia, @RequestParam("id") String id){
+    public ResponseEntity<?> getUpdate(Franquicia franquicia, @RequestParam("id") Integer id){
         return ResponseEntity.ok(franquiciaServices.updateFranquicia(id, franquicia));
     }
 

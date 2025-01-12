@@ -1,6 +1,5 @@
 package com.franquicias.franquicias.infrastruture.entity;
 
-import com.icodeap.ecommerce.domain.EcoBottleState;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;

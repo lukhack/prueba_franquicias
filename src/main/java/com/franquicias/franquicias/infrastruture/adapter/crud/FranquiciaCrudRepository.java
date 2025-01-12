@@ -1,19 +1,13 @@
 package com.franquicias.franquicias.infrastruture.adapter.crud;
 
 
-import com.icodeap.ecommerce.domain.EcoBottleState;
-import com.icodeap.ecommerce.infrastructure.entity.EcoBottleEntity;
+import com.franquicias.franquicias.infrastruture.entity.FranquiciaEntity;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import java.time.LocalDate;
 import java.util.Optional;
 
-public interface FranquiciaCrudRepository extends CrudRepository<EcoBottleEntity, Integer> {
-    Optional<EcoBottleEntity> findByDateCreated(LocalDate date);
-    Optional<EcoBottleEntity> findByBottleState(EcoBottleState bottleState);
-    Optional<EcoBottleEntity> findByCode(String code);
-    Optional<EcoBottleEntity> findByCodeAndKey(String code,String key);
-    Optional<EcoBottleEntity> findByKey(String key);
-
-
+@Repository
+public interface FranquiciaCrudRepository extends CrudRepository<FranquiciaEntity, Integer> {
+    Optional<FranquiciaEntity> findByNombre(String nombre);
 }
