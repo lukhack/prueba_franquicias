@@ -32,7 +32,7 @@
     docker build -t mi_aplicacion_springboot .
     docker run -p 9191:9191 mi_aplicacion_springboot
 
-#### 📚 Endpoints de la API
+# 📚 Endpoints de la API
 
 ## 🏢 Franquicia
 
@@ -51,6 +51,14 @@
     Método: GET
 
     Descripción: Recupera los detalles de una franquicia específica por su ID.
+
+#### Obtener una mayor stock
+
+    URL: /api_sucursal/{id}
+
+    Método: GET
+
+    Descripción: Obtine el la franquicia y sucursal con mayor stock
 
 #### Crear una nueva franquicia
 
@@ -92,6 +100,8 @@
     Método: GET
 
     Descripción: Recupera los detalles de una sucursal específica por su ID.
+
+
 
 #### Obtener una sucursal por nombre
 
