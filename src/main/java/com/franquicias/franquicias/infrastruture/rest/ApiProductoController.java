@@ -26,10 +26,6 @@ public class ApiProductoController {
         return ResponseEntity.ok(productoServices.findAll());
     }
 
-    @GetMapping(path = "/nombre/{nombre}", produces = "application/json")
-    public ResponseEntity<?> getNombre(@PathVariable("nombre") String nombre){
-        return ResponseEntity.ok(productoServices.findByNombre(nombre));
-    }
 
     @PostMapping( produces = "application/json")
     public ResponseEntity<?> getCreate(@RequestBody Producto producto){
