@@ -28,6 +28,11 @@ public class ProductoServices {
         return prosuctoRepository.findById(id);
     }
 
+    public void delete(Integer id){
+         prosuctoRepository.delete(id);
+    }
+
+
     public List<Producto> findAll(){
         return prosuctoRepository.findAll();
     }

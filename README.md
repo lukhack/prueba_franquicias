@@ -149,6 +149,14 @@
 
     Descripción: Obtine el la franquicia y sucursal con mayor stock
 
+#### eliminar un producto
+
+    URL: /api_producto/{id}
+
+    Método: DELETE
+
+    Descripción: Elimina un producto
+
 #### Crear un nuevo producto
 
     URL: /api_producto
@@ -174,6 +182,14 @@
     Método: PUT
 
     Descripción: Actualiza los detalles de un producto existente.
+
+    Cuerpo de la solicitud:
+
+        {
+            "nombre": "Nombre del Producto",
+            "stock": 100
+        }
+    # Nota: En caso de que requiera modificar el nombre o el stock los mandi individualmente.
 
 ## 💡 Notas Adicionales
 

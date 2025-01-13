@@ -16,7 +16,7 @@ public class ProductoEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
-    private int stock;
+    private Integer stock;
 
     @ManyToOne
     @JoinColumn(name = "sucursal_id", referencedColumnName = "id")

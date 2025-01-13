@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class Producto {
     private Long id;
     private String nombre;
-    private int stock;
+    private Integer stock;
     private Sucursal sucursal;
 }

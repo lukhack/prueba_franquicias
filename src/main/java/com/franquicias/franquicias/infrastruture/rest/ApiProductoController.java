@@ -43,4 +43,11 @@ public class ApiProductoController {
         return ResponseEntity.ok(productoServices.updateProducto(id, producto));
     }
 
+
+    @DeleteMapping(path = "/{id}", produces = "application/json")
+    public ResponseEntity<?> getDelete( @PathVariable("id") Integer id){
+        productoServices.delete(id);
+        return ResponseEntity.ok("Datos eliminados correctamente");
+    }
+
 }

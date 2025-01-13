@@ -57,8 +57,10 @@ public class ProdcutoRepositoryImpl implements ProductoRepository {
     public Producto updateProducto(Integer id, Producto  franquicia) {
         return this.productoCrudRepository.findById(id)
            .map(existingFranquicia -> {
-                existingFranquicia.setNombre(franquicia.getNombre());
-                return this.productoCrudRepository.save(existingFranquicia);
+                existingFranquicia.setNombre(franquicia.getNombre()==null?existingFranquicia.getNombre():franquicia.getNombre());
+               existingFranquicia.setStock(franquicia.getStock()==null?existingFranquicia.getStock():franquicia.getStock());
+
+               return this.productoCrudRepository.save(existingFranquicia);
            })
             .map(( franquiciaEntity)-> this.modelMapper.map(franquiciaEntity, Producto.class))
            .orElseThrow(() -> new IllegalStateException(messageSourceHelper.getMessage("error.response.not.found")));
