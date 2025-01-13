@@ -1,170 +1,170 @@
-** PROYECTO DE GESTIÓN DE FRANQUICIAS **
+# PROYECTO DE GESTIÓN DE FRANQUICIAS
 
-✨ Despliegue de la Aplicación
+### ✨ Despliegue de la Aplicación
 
-🔧 Prerrequisitos
+### 🔧 Prerrequisitos
 
-Java 21: Asegúrate de tener instalada la versión 21 de Java.
+    Java 21: Asegúrate de tener instalada la versión 21 de Java.
 
-Maven: Herramienta de construcción y gestión de dependencias.
+    Maven: Herramienta de construcción y gestión de dependencias.
 
-Docker (opcional): Para desplegar la aplicación en un contenedor.
+    Docker (opcional): Para desplegar la aplicación en un contenedor.
 
-🚀 Construcción y Ejecución
+### 🚀 Construcción y Ejecución
 
-Clonar el Repositorio:
+#### Clonar el Repositorio:
 
-git clone https://github.com/tu_usuario/tu_repositorio.git
-cd tu_repositorio
+    git clone https://github.com/tu_usuario/tu_repositorio.git
+    cd tu_repositorio
 
-Construir la Aplicación:
+#### Construir la Aplicación:
 
-mvn clean package
+    mvn clean package
 
-Ejecutar la Aplicación:
+#### Ejecutar la Aplicación:
 
-Sin Docker:
+#### Sin Docker:
 
-java -jar target/tu_aplicacion.jar
+    java -jar target/tu_aplicacion.jar
 
-Con Docker:
+#### Con Docker:
 
-docker build -t mi_aplicacion_springboot .
-docker run -p 9191:9191 mi_aplicacion_springboot
+    docker build -t mi_aplicacion_springboot .
+    docker run -p 9191:9191 mi_aplicacion_springboot
 
-📚 Endpoints de la API
+#### 📚 Endpoints de la API
 
-🏢 Franquicia
+## 🏢 Franquicia
 
-Obtener todas las franquicias
+## Obtener todas las franquicias
 
-URL: /api_franquicia
+    URL: /api_franquicia
 
-Método: GET
+    Método: GET
 
-Descripción: Recupera una lista de todas las franquicias.
+    Descripción: Recupera una lista de todas las franquicias.
 
-Obtener una franquicia por ID
+### Obtener una franquicia por ID
 
-URL: /api_franquicia/{id}
+    URL: /api_franquicia/{id}
 
-Método: GET
+    Método: GET
 
-Descripción: Recupera los detalles de una franquicia específica por su ID.
+    Descripción: Recupera los detalles de una franquicia específica por su ID.
 
-Crear una nueva franquicia
+#### Crear una nueva franquicia
 
-URL: /api_franquicia
+    URL: /api_franquicia
 
-Método: POST
+    Método: POST
 
-Descripción: Crea una nueva franquicia.
+    Descripción: Crea una nueva franquicia.
 
-Cuerpo de la solicitud:
+    Cuerpo de la solicitud:
 
-{
-  "nombre": "Nombre de la Franquicia",
-  "sucursales": []
-}
+    {
+    "nombre": "Nombre de la Franquicia",
+    "sucursales": []
+    }
 
-Actualizar una franquicia existente
+#### Actualizar una franquicia existente
 
-URL: /api_franquicia/{id}
+    URL: /api_franquicia/{id}
 
-Método: PUT
+    Método: PUT
 
-Descripción: Actualiza los detalles de una franquicia existente.
+    Descripción: Actualiza los detalles de una franquicia existente.
 
-🏬 Sucursal
+## 🏬 Sucursal
 
-Obtener todas las sucursales
+#### Obtener todas las sucursales
 
-URL: /api_sucursal
+    URL: /api_sucursal
 
-Método: GET
+    Método: GET
 
-Descripción: Recupera una lista de todas las sucursales.
+    Descripción: Recupera una lista de todas las sucursales.
 
-Obtener una sucursal por ID
+#### Obtener una sucursal por ID
 
-URL: /api_sucursal/{id}
+    URL: /api_sucursal/{id}
 
-Método: GET
+    Método: GET
 
-Descripción: Recupera los detalles de una sucursal específica por su ID.
+    Descripción: Recupera los detalles de una sucursal específica por su ID.
 
-Obtener una sucursal por nombre
+#### Obtener una sucursal por nombre
 
-URL: /api_sucursal/nombre/{nombre}
+    URL: /api_sucursal/nombre/{nombre}
 
-Método: GET
+    Método: GET
 
-Descripción: Recupera los detalles de una sucursal específica por su nombre.
+    Descripción: Recupera los detalles de una sucursal específica por su nombre.
 
-Crear una nueva sucursal
+#### Crear una nueva sucursal
 
-URL: /api_sucursal
+    URL: /api_sucursal
 
-Método: POST
+    Método: POST
 
-Descripción: Crea una nueva sucursal.
+    Descripción: Crea una nueva sucursal.
 
-Cuerpo de la solicitud:
+    *** Cuerpo de la solicitud:
 
-{
-  "nombre": "Nombre de la Sucursal",
-  "productos": [],
-  "franquicia": {
-    "id": 1
-  }
-}
+    {
+    "nombre": "Nombre de la Sucursal",
+    "productos": [],
+    "franquicia": {
+        "id": 1
+    }
+    }
 
-🛒 Producto
+## 🛒 Producto
 
-Obtener todos los productos
+#### Obtener todos los productos
 
-URL: /api_producto
+    URL: /api_producto
 
-Método: GET
+    Método: GET
 
-Descripción: Recupera una lista de todos los productos.
+    Descripción: Recupera una lista de todos los productos.
 
-Obtener un producto por ID
+#### Obtener un producto por ID
 
-URL: /api_producto/{id}
+    URL: /api_producto/{id}
 
-Método: GET
+    Método: GET
 
-Descripción: Recupera los detalles de un producto específico por su ID.
+    Descripción: Recupera los detalles de un producto específico por su ID.
 
-Crear un nuevo producto
+#### Crear un nuevo producto
 
-URL: /api_producto
+    URL: /api_producto
 
-Método: POST
+    Método: POST
 
-Descripción: Crea un nuevo producto.
+    Descripción: Crea un nuevo producto.
 
-Cuerpo de la solicitud:
+    Cuerpo de la solicitud:
 
-{
-  "nombre": "Nombre del Producto",
-  "stock": 100,
-  "sucursal": {
-    "id": 1
-  }
-}
+    {
+    "nombre": "Nombre del Producto",
+    "stock": 100,
+    "sucursal": {
+        "id": 1
+    }
+    }
 
-Actualizar un producto existente
+#### Actualizar un producto existente
 
-URL: /api_producto/{id}
+    URL: /api_producto/{id}
 
-Método: PUT
+    Método: PUT
 
-Descripción: Actualiza los detalles de un producto existente.
+    Descripción: Actualiza los detalles de un producto existente.
 
-💡 Notas Adicionales
+## 💡 Notas Adicionales
 
-Formato de Datos: Todas las respuestas y solicitudes utilizan el formato JSON.
+#### * Formato de Datos: Todas las respuestas y solicitudes utilizan el formato JSON.
 
-Manejo de Errores: La API devuelve códigos de estado HTTP adecuados en caso de errores, como 404 Not Found si no se encuentra una entidad.
+#### * Manejo de Errores: La API devuelve códigos de estado HTTP adecuados en caso de errores, como 404 Not Found si no se encuentra una entidad.
