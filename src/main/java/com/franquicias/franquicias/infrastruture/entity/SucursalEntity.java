@@ -18,6 +18,12 @@ public class SucursalEntity implements Serializable {
     private Long id;
     private String nombre;
 
+
+    @ManyToOne
+    @JoinColumn(name = "franquicia_id", referencedColumnName = "id")
+    private FranquiciaEntity franquicia;
+
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ProductoEntity> productos;
+
 }

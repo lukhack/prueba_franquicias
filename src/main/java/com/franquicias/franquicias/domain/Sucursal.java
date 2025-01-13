@@ -16,5 +16,6 @@ public class Sucursal implements Serializable {
     private Long id;
     private String nombre;
     private List<Producto> productos;
+    private Franquicia franquicia;
 
 }

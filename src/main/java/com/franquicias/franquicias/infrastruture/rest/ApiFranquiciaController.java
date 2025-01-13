@@ -15,7 +15,7 @@ public class ApiFranquiciaController {
     }
 
     @GetMapping(path = "/{id}", produces = "application/json")
-    public ResponseEntity<?> getId(@RequestParam("id") Integer id){
+    public ResponseEntity<?> getId(@PathVariable("id") Integer id){
         return ResponseEntity.ok(franquiciaServices.findById(id));
     }
 
@@ -24,8 +24,8 @@ public class ApiFranquiciaController {
         return ResponseEntity.ok(franquiciaServices.findAll());
     }
 
-    @GetMapping(path = "/{nombre}", produces = "application/json")
-    public ResponseEntity<?> getNombre(@RequestParam("nombre") String nombre){
+    @GetMapping(path = "/nombre/{nombre}", produces = "application/json")
+    public ResponseEntity<?> getNombre(@PathVariable("nombre") String nombre){
         return ResponseEntity.ok(franquiciaServices.findByNombre(nombre));
     }
 

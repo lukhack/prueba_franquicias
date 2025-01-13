@@ -17,4 +17,8 @@ public class ProductoEntity implements Serializable {
     private Long id;
     private String nombre;
     private int stock;
+
+    @ManyToOne
+    @JoinColumn(name = "sucursal_id", referencedColumnName = "id")
+    private SucursalEntity sucursal;
 }

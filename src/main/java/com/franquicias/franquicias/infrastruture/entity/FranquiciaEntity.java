@@ -19,6 +19,6 @@ public class FranquiciaEntity implements Serializable {
     private Long id;
     private String nombre;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, targetEntity = SucursalEntity.class)
     private List<SucursalEntity> sucursales;
 }
