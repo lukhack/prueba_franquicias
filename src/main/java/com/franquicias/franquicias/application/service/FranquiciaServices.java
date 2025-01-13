@@ -14,8 +14,8 @@ public class FranquiciaServices {
         this.franquiciaRepository = franquiciaRepository;
     }
 
-    public Franquicia create(Franquicia ecoBottle) {
-        return franquiciaRepository.createFranquicia(ecoBottle);
+    public Franquicia create(Franquicia franquicia) {
+        return franquiciaRepository.createFranquicia(franquicia);
     }
 
     public Franquicia findByNombre(String name) {

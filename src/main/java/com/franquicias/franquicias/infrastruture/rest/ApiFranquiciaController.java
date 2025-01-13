@@ -14,7 +14,7 @@ public class ApiFranquiciaController {
         this.franquiciaServices = franquiciaServices;
     }
 
-    @GetMapping(path = "/id/{id}", produces = "application/json")
+    @GetMapping(path = "/{id}", produces = "application/json")
     public ResponseEntity<?> getId(@RequestParam("id") Integer id){
         return ResponseEntity.ok(franquiciaServices.findById(id));
     }
@@ -29,13 +29,14 @@ public class ApiFranquiciaController {
         return ResponseEntity.ok(franquiciaServices.findByNombre(nombre));
     }
 
-    @PostMapping(path = "", produces = "application/json")
-    public ResponseEntity<?> getCreate(Franquicia franquicia){
+    @PostMapping( produces = "application/json")
+    public ResponseEntity<?> getCreate(@RequestBody Franquicia franquicia){
+        System.out.println("nombre 3:"+franquicia.getNombre());
         return ResponseEntity.ok(franquiciaServices.create(franquicia));
     }
 
     @PutMapping(path = "/{id}", produces = "application/json")
-    public ResponseEntity<?> getUpdate(Franquicia franquicia, @RequestParam("id") Integer id){
+    public ResponseEntity<?> getUpdate(@RequestBody Franquicia franquicia, @PathVariable("id") Integer id){
         return ResponseEntity.ok(franquiciaServices.updateFranquicia(id, franquicia));
     }
 

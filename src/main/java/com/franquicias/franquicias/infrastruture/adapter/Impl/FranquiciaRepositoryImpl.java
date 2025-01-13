@@ -45,6 +45,8 @@ public class FranquiciaRepositoryImpl implements FranquiciaRepository {
     @Override
     public Franquicia createFranquicia(Franquicia  franquicia) {
         FranquiciaEntity franquiciaEntity = this.modelMapper.map(franquicia, FranquiciaEntity.class);
+        System.out.println("name 1:"+franquicia.getNombre());
+        System.out.println("name 2:"+franquiciaEntity.getNombre());
         return this.modelMapper.map(this.franquiciaCrudRepository.save(franquiciaEntity), Franquicia.class);
     }
 

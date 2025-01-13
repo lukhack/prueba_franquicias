@@ -1,0 +1,20 @@
+# Proyecto de API RESTful de Franquicias
+
+Este proyecto implementa una API RESTful para gestionar franquicias, desarrollada con Spring Boot. A continuación, se detallan las instrucciones para desplegar la aplicación y la documentación de los endpoints disponibles.
+
+## Despliegue de la Aplicación
+
+### Prerrequisitos
+
+- **Java Development Kit (JDK) 17**: Asegúrate de tener instalado JDK 17 en tu sistema. Puedes verificar la instalación ejecutando `java -version` en tu terminal.
+
+- **Maven**: Herramienta de gestión de dependencias y construcción del proyecto. Verifica su instalación con `mvn -version`.
+
+- **Base de Datos**: La aplicación está configurada para utilizar una base de datos PostgreSQL. Asegúrate de tener una instancia de PostgreSQL en funcionamiento y configura las credenciales adecuadamente en el archivo `application.properties`.
+
+### Configuración de la Base de Datos
+
+1. **Crear la Base de Datos**: Crea una base de datos en PostgreSQL para la aplicación. Por ejemplo:
+
+   ```sql
+   CREATE DATABASE franquicias_db;
