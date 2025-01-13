@@ -2,6 +2,7 @@ package com.franquicias.franquicias.application.service;
 
 import com.franquicias.franquicias.application.repository.FranquiciaRepository;
 import com.franquicias.franquicias.domain.Franquicia;
+import com.franquicias.franquicias.domain.Producto;
 
 import java.util.List;
 
@@ -33,6 +34,7 @@ public class FranquiciaServices {
     public List<Franquicia> findAll(){
         return franquiciaRepository.findAll();
     }
+
 
 
 

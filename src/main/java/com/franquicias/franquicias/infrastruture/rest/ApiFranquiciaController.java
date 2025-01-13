@@ -19,11 +19,6 @@ public class ApiFranquiciaController {
         return ResponseEntity.ok(franquiciaServices.findById(id));
     }
 
-    //extrea el producto de mayor valor
-    @GetMapping(path = "/max/{id}", produces = "application/json")
-    public ResponseEntity<?> getMax(@PathVariable("id") String nombre){
-        return ResponseEntity.ok(franquiciaServices.findByNombre(nombre));
-    }
 
     @GetMapping(produces = "application/json")
     public ResponseEntity<?> getAll(){

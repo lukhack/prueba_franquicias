@@ -72,6 +72,12 @@ public class ProdcutoRepositoryImpl implements ProductoRepository {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public List<Producto> findAllMax(Long franquiciaId) {
+        return StreamSupport.stream(productoCrudRepository.findProductoConMasStockPorFranquicia(franquiciaId).spliterator(), false)
+                .map(entity -> modelMapper.map(entity, Producto.class))
+                .collect(Collectors.toList());
+    }
 
 
 }

@@ -13,4 +13,5 @@ public interface ProductoRepository {
     Producto findById(Integer id);
     void delete(Integer id);
     List<Producto> findAll();
+    List<Producto> findAllMax(Long franquiciaId);
 }

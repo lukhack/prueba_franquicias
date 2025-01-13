@@ -26,6 +26,11 @@ public class ApiProductoController {
         return ResponseEntity.ok(productoServices.findAll());
     }
 
+    //extrea el producto de mayor valor
+    @GetMapping(path = "/max/{id}", produces = "application/json")
+    public ResponseEntity<?> getMax(@PathVariable("id") Long franquiciaId){
+        return ResponseEntity.ok(productoServices.findAllMax(franquiciaId));
+    }
 
     @PostMapping( produces = "application/json")
     public ResponseEntity<?> getCreate(@RequestBody Producto producto){

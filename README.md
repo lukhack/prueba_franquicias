@@ -52,13 +52,7 @@
 
     Descripción: Recupera los detalles de una franquicia específica por su ID.
 
-#### Obtener una mayor stock
 
-    URL: /api_sucursal/{id}
-
-    Método: GET
-
-    Descripción: Obtine el la franquicia y sucursal con mayor stock
 
 #### Crear una nueva franquicia
 
@@ -146,6 +140,14 @@
     Método: GET
 
     Descripción: Recupera los detalles de un producto específico por su ID.
+
+#### Obtener una mayor stock
+
+    URL: /api_producto/max/{id}
+
+    Método: GET
+
+    Descripción: Obtine el la franquicia y sucursal con mayor stock
 
 #### Crear un nuevo producto
 

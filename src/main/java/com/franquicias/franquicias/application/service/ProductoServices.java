@@ -32,6 +32,7 @@ public class ProductoServices {
         return prosuctoRepository.findAll();
     }
 
-
-
+    public List<Producto> findAllMax(Long franquiciaId){
+        return prosuctoRepository.findAllMax(franquiciaId);
+    }
 }
